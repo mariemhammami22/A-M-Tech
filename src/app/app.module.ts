@@ -7,12 +7,15 @@ import { AppComponent } from './app.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { SliderComponent } from './slider/slider.component';
-import { SliderItemComponent } from './slider-item/slider-item.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { HomeComponent } from './home/home.component';
 import { MessagesFormComponent } from './messages-form/messages-form.component';
 import { ContactHeaderComponent } from './contact-header/contact-header.component';
 import { ProductsComponent } from './products/products.component';
+import { MiddleProductsComponent } from './middle-products/middle-products.component';
+import { BestSellersComponent } from './best-sellers/best-sellers.component';
+import { IconBoxComponent } from './icon-box/icon-box.component';
+
 
 const appRoutes: Routes = [
   { path: 'contact-page', component: ContactPageComponent},
@@ -29,12 +32,14 @@ const appRoutes: Routes = [
     MainNavComponent,
     FooterComponent,
     SliderComponent,
-    SliderItemComponent,
     ContactPageComponent,
     HomeComponent,
     MessagesFormComponent,
     ContactHeaderComponent,
     ProductsComponent,
+    MiddleProductsComponent,
+    BestSellersComponent,
+    IconBoxComponent,
   ],
   imports: [
     BrowserModule,
