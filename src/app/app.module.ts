@@ -18,12 +18,14 @@ import { IconBoxComponent } from './icon-box/icon-box.component';
 import { ProductSheetComponent } from './product-sheet/product-sheet.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { RelatedProductsComponent } from './related-products/related-products.component';
+import { CartComponent } from './cart/cart.component';
 
 
 const appRoutes: Routes = [
   { path: 'contact-page', component: ContactPageComponent},
   { path: 'home', component: HomeComponent},
   { path: 'home/product-sheet', component: ProductSheetComponent},
+  { path: 'cart', component: CartComponent},
 
 ];
 
@@ -47,6 +49,7 @@ const appRoutes: Routes = [
     ProductSheetComponent,
     ProductDetailComponent,
     RelatedProductsComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

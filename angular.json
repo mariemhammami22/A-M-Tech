@@ -35,6 +35,8 @@
               "src/assets/styles/contact_responsive.css",
               "src/assets/styles/product.css",
               "src/assets/styles/product_responsive.css",
+              "src/assets/styles/cart.css",
+              "src/assets/styles/cart_responsive.css",
               "src/styles.css"
             ],
             "scripts": [
@@ -52,7 +54,8 @@
               "src/assets/plugins/parallax-js-master/parallax.min.js",
               "src/assets/js/contact.js",
               "src/assets/js/product.js",
-              "src/assets/js/custom.js"
+              "src/assets/js/custom.js",
+              "src/assets/js/cart.js"
             ]
           },
           "configurations": {
