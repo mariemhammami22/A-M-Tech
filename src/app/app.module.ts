@@ -15,11 +15,15 @@ import { ProductsComponent } from './products/products.component';
 import { MiddleProductsComponent } from './middle-products/middle-products.component';
 import { BestSellersComponent } from './best-sellers/best-sellers.component';
 import { IconBoxComponent } from './icon-box/icon-box.component';
+import { ProductSheetComponent } from './product-sheet/product-sheet.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { RelatedProductsComponent } from './related-products/related-products.component';
 
 
 const appRoutes: Routes = [
   { path: 'contact-page', component: ContactPageComponent},
   { path: 'home', component: HomeComponent},
+  { path: 'home/product-sheet', component: ProductSheetComponent},
 
 ];
 
@@ -40,6 +44,9 @@ const appRoutes: Routes = [
     MiddleProductsComponent,
     BestSellersComponent,
     IconBoxComponent,
+    ProductSheetComponent,
+    ProductDetailComponent,
+    RelatedProductsComponent,
   ],
   imports: [
     BrowserModule,
