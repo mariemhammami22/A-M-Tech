@@ -19,6 +19,7 @@ import { ProductSheetComponent } from './product-sheet/product-sheet.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { RelatedProductsComponent } from './related-products/related-products.component';
 import { CartComponent } from './cart/cart.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 const appRoutes: Routes = [
@@ -26,7 +27,7 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'home/product-sheet', component: ProductSheetComponent},
   { path: 'cart', component: CartComponent},
-
+  { path: 'signup', component: SignupComponent},
 ];
 
 
@@ -50,6 +51,7 @@ const appRoutes: Routes = [
     ProductDetailComponent,
     RelatedProductsComponent,
     CartComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
