@@ -20,6 +20,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { RelatedProductsComponent } from './related-products/related-products.component';
 import { CartComponent } from './cart/cart.component';
 import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
 
 
 const appRoutes: Routes = [
@@ -28,6 +29,7 @@ const appRoutes: Routes = [
   { path: 'home/product-sheet', component: ProductSheetComponent},
   { path: 'cart', component: CartComponent},
   { path: 'signup', component: SignupComponent},
+  { path: 'login', component: LoginComponent},
 ];
 
 
@@ -52,6 +54,7 @@ const appRoutes: Routes = [
     RelatedProductsComponent,
     CartComponent,
     SignupComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
