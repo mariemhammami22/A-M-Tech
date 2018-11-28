@@ -21,6 +21,7 @@ import { RelatedProductsComponent } from './related-products/related-products.co
 import { CartComponent } from './cart/cart.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const appRoutes: Routes = [
@@ -30,6 +31,8 @@ const appRoutes: Routes = [
   { path: 'cart', component: CartComponent},
   { path: 'signup', component: SignupComponent},
   { path: 'login', component: LoginComponent},
+  { path: 'products', component: ProductsComponent},
+
 ];
 
 
@@ -57,6 +60,7 @@ const appRoutes: Routes = [
     LoginComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(
