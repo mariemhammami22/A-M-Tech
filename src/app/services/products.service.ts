@@ -13,7 +13,7 @@ export class ProductsService {
    }
 
    postProduct(commande: object) {
-     console.log('service in')
+     console.log('service in');
     return this.http.post('http://54.38.33.183:8081/hardware/api/products', commande);
    }
 

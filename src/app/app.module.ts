@@ -22,9 +22,11 @@ import { CartComponent } from './cart/cart.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 
 const appRoutes: Routes = [
+
   { path: 'contact-page', component: ContactPageComponent},
   { path: 'home', component: HomeComponent},
   { path: 'home/product-sheet', component: ProductSheetComponent},
@@ -32,6 +34,10 @@ const appRoutes: Routes = [
   { path: 'signup', component: SignupComponent},
   { path: 'login', component: LoginComponent},
   { path: 'products', component: ProductsComponent},
+  { path: 'product/:productId' , component: ProductDetailComponent},
+
+  { path: '**', component: PagenotfoundComponent},
+  { path: '', component: HomeComponent},
 
 ];
 
@@ -58,6 +64,7 @@ const appRoutes: Routes = [
     CartComponent,
     SignupComponent,
     LoginComponent,
+    PagenotfoundComponent,
   ],
   imports: [
     HttpClientModule,

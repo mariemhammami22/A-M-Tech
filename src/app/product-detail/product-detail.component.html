@@ -1,3 +1,4 @@
+
 <div class="product_details">
 	<div class="container">
 		<div class="row details_row">
@@ -6,7 +7,7 @@
 			<div class="col-lg-6">
 				<div class="details_image">
 					<div class="details_image_large">
-						<img src="assets/images/categ_1.jpg" alt="">
+						<img src="assets/images/{{product?.id}}.jpg" alt="">
 						<div class="product_extra product_new">
 							<a href="categories.html">New</a>
 						</div>
@@ -31,9 +32,8 @@
 			<!-- Product Content -->
 			<div class="col-lg-6">
 				<div class="details_content">
-					<div class="details_name">Samsung Galaxy S9</div>
-					<div class="details_discount">$890</div>
-					<div class="details_price">$670</div>
+					<div class="details_name">{{product?.name}}</div>
+					<div class="details_price">{{product?.prix}}</div>
 
 					<!-- In Stock -->
 					<div class="in_stock_container">
@@ -116,3 +116,4 @@
 		</div>
 	</div>
 </div>
+<app-related-products></app-related-products>
