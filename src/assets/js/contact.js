@@ -42,8 +42,6 @@ $(document).ready(function()
 
 	initSearch();
 	initMenu();
-	initGoogleMap();
-
 	/* 
 
 	2. Set Header

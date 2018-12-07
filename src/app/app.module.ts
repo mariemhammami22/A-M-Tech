@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -26,21 +26,22 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { FilterPipe } from './filter.pipe';
-
+import { CategoriesService } from './services/categories/categories.service';
+import { HttpModule } from '@angular/http';
 
 const appRoutes: Routes = [
 
-  { path: 'contact-page', component: ContactPageComponent},
-  { path: 'home', component: HomeComponent},
-  { path: 'home/product-sheet', component: ProductSheetComponent},
-  { path: 'cart', component: CartComponent},
-  { path: 'signup', component: SignupComponent},
-  { path: 'login', component: LoginComponent},
-  { path: 'products', component: ProductsComponent},
-  { path: 'product/:productId' , component: ProductDetailComponent},
-  { path: 'about-us' , component: AboutUsComponent},
-  { path: '', component: HomeComponent},
-  { path: '**', component: PagenotfoundComponent},
+  { path: 'contact-page', component: ContactPageComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'home/product-sheet', component: ProductSheetComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'products', component: ProductsComponent },
+  { path: 'product/:productId', component: ProductDetailComponent },
+  { path: 'about-us', component: AboutUsComponent },
+  { path: '', component: HomeComponent },
+  { path: '**', component: PagenotfoundComponent },
 ];
 
 
@@ -75,12 +76,13 @@ const appRoutes: Routes = [
     HttpClientModule,
     BrowserModule,
     FormsModule,
+    HttpModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      { enableTracing: false } // <-- debugging purposes only
     )
   ],
-  providers: [],
+  providers: [CategoriesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
