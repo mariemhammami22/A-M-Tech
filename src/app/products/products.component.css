@@ -1,15 +1,31 @@
-#imaginary_container{
-  margin-top:20%; /* Don't copy this */
+#custom-search-input{
+  padding: 3px;
+  border: solid 1px #E4E4E4;
+  border-radius: 6px;
+  background-color: #fff;
 }
-.stylish-input-group .input-group-addon{
-  background: white !important; 
+
+#custom-search-input input{
+  border: 0;
+  box-shadow: none;
 }
-.stylish-input-group .form-control{
-  border-right:0; 
-box-shadow:0 0 0; 
-border-color:#ccc;
+
+#custom-search-input button{
+  margin: 2px 0 0 0;
+  background: none;
+  box-shadow: none;
+  border: 0;
+  color: #666666;
+  padding: 0 8px 0 10px;
+  border-left: solid 1px #ccc;
 }
-.stylish-input-group button{
-  border:0;
-  background:transparent;
+
+#custom-search-input button:hover{
+  border: 0;
+  box-shadow: none;
+  border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+  font-size: 23px;
 }
