@@ -12,60 +12,57 @@
         </div>
       </div>
     </div>
-    <div class="row"  *ngFor="let cart of Carts">
+    <div class="row" *ngFor="let cart of Carts">
       <div class="col">
         <!-- Column Titles -->
-
         <div class="row cart_items_row">
           <div class="col">
-    
+
             <!-- Cart Item -->
-           
-              <div class="cart_item d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
-                <!-- Name -->
-    
-                <div class="cart_item_product d-flex flex-row align-items-center justify-content-start">
-                  <div class="cart_item_image">
-                    <div>
-                      <img alt="" src="assets/images/{{cart.id}}.jpg">
-                    </div>
-                  </div>
-                  <div class="cart_item_name_container">
-                    <div class="cart_item_name">
-                      <a href="#">{{cart.name}}</a>
-                    </div>
-                    <a (click)="removeProduct(cart)">Remove from Cart</a>
+            <div class="cart_item d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
+
+              <!-- Name -->
+              <div class="cart_item_product d-flex flex-row align-items-center justify-content-start">
+                <div class="cart_item_image">
+                  <div>
+                    <img alt="" src="assets/images/{{cart.id}}.jpg">
                   </div>
                 </div>
-                <!-- Price -->
-                <div class="cart_item_total">{{cart.prix}}$</div>
+                <div class="cart_item_name_container">
+                  <div class="cart_item_name">
+                    <span>{{cart.name}}</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Price -->
+              <div class="cart_item_total">{{cart.prix}}$</div>
 
-            <!-- Quantity -->
-            <div class="cart_item_quantity">
-              <div class="product_quantity_container">
-                <div class="product_quantity clearfix">
-                  <span>Qty</span>
-                  <input id="quantity_input" type="text" pattern="[0-9]*" value="1">
-                  <div class="quantity_buttons">
-                    <div class="quantity_inc quantity_control" id="quantity_inc_button">
-                      <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </div>
-                    <div class="quantity_dec quantity_control" id="quantity_dec_button">
-                      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+              <!-- Quantity -->
+              <div class="cart_item_quantity">
+                <div class="product_quantity_container">
+                  <div class="product_quantity clearfix">
+                    <span>Qty</span>
+                    <input id="quantity_input" type="text" pattern="[0-9]*" value="1">
+                    <div class="quantity_buttons">
+                      <div class="quantity_inc quantity_control" id="quantity_inc_button">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                      </div>
+                      <div class="quantity_dec quantity_control" id="quantity_dec_button">
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <!-- Total -->
+              <div class="cart_item_total">{{cart.prix}}$</div>
             </div>
-            <!-- Total -->
-            <div class="cart_item_total">{{cart.prix}}$</div>
-            </div>
-    
+
           </div>
         </div>
       </div>
     </div>
-  
+
     <div class="row row_cart_buttons">
       <div class="col">
         <div class="cart_buttons d-flex flex-lg-row flex-column align-items-start justify-content-start">
@@ -108,9 +105,9 @@
             </label>
           </div>
         </div>
-
-
-        <div class="col-lg-6 offset-lg-2">
+      </div>
+      
+      <div class="col-lg-6 offset-lg-2">
           <div class="cart_total">
             <div class="section_title">Cart total</div>
             <div class="section_subtitle">Final info</div>
@@ -135,6 +132,5 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
   </div>

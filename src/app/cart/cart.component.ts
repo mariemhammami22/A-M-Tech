@@ -2,6 +2,7 @@ import { ProductsService } from './../services/products.service';
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/cart.service';
 import { Product } from 'src/app/product';
+import { cartProducts } from '../models/cartProducts';
 
 @Component({
   selector: 'app-cart',
@@ -12,9 +13,9 @@ export class CartComponent implements OnInit {
 
   constructor(private productService: ProductsService, private _cartshop: CartService) { }
   Carts: Product[] = [];
-
+  private total = 0;
   ngOnInit() {
-    this.Carts = this._cartshop.Carts;
+    this.Carts = cartProducts;
   }
 
   checkout() {
@@ -28,6 +29,12 @@ export class CartComponent implements OnInit {
       'reference': 'string',
       'statut': 'string'
     }).subscribe(res => console.log('res in'));
+  }
+
+  calculateCartTotal() {
+    cartProducts.forEach(function (element) {
+      this.total += element.prix;
+    });
   }
 
   removeProduct(cart) {
