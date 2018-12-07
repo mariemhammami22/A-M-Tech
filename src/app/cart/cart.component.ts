@@ -10,13 +10,14 @@ import { Product } from 'src/app/product';
 })
 export class CartComponent implements OnInit {
 
-  constructor(private productService: ProductsService, private _cartshop: CartService  ) { }
-  Carts: Product [] = [];
+  constructor(private productService: ProductsService, private _cartshop: CartService) { }
+  Carts: Product[] = [];
+
   ngOnInit() {
-    this.Carts = this._cartshop.Carts ;
+    this.Carts = this._cartshop.Carts;
   }
+
   checkout() {
-    console.log('checkout');
     this.productService.postProduct({
       'date': '2018-11-27T11:44:55.216Z',
       'email': 'string',
@@ -26,7 +27,10 @@ export class CartComponent implements OnInit {
       ],
       'reference': 'string',
       'statut': 'string'
-    }).subscribe( res => console.log('res in'));
+    }).subscribe(res => console.log('res in'));
   }
 
+  removeProduct(cart) {
+    this.Carts.filter(c => c.id !== cart.id);
+  }
 }

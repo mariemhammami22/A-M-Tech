@@ -1,27 +1,11 @@
-<div class="container" style="margin-top: 50px">
+<div class="container">
   <h2 class="h2">Categories</h2>
-  <div class="form-check">
-    <label>
-      <input type="checkbox" name="check" checked />
-      <span class="label-text">Smart Phones</span>
-    </label>
-  </div>
-  <div class="form-check">
-    <label>
-      <input type="checkbox" name="check" />
-      <span class="label-text">Personal Computers</span>
-    </label>
-  </div>
-  <div class="form-check">
-    <label>
-      <input type="checkbox" name="check" />
-      <span class="label-text">Tablets</span>
-    </label>
-  </div>
-  <div class="form-check">
-    <label>
-      <input type="checkbox" name="check" />
-      <span class="label-text">Smart Watches</span>
-    </label>
+  <div *ngFor='let category of getCategories()'>
+    <div class="form-check">
+      <label>
+        <input type="checkbox" name="check" [checked]="checked" (click)="filterCategories(category)" />
+        <span class="label-text">{{category.name}}</span>
+      </label>
+    </div>
   </div>
 </div>

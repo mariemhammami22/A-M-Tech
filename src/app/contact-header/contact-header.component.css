@@ -1,0 +1,12 @@
+.home {
+    padding: 0px !important;
+    /* padding-left: 50px !important;
+    padding-right: 50px !important; */
+  }
+  .home_background {
+    filter: blur(1px);
+  }
+  
+  .red-intense {
+    color: #e43a45;
+  }
