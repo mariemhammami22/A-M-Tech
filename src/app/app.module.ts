@@ -23,6 +23,9 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { FilterPipe } from './filter.pipe';
 
 
 const appRoutes: Routes = [
@@ -35,9 +38,9 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'products', component: ProductsComponent},
   { path: 'product/:productId' , component: ProductDetailComponent},
+  { path: 'about-us' , component: AboutUsComponent},
   { path: '', component: HomeComponent},
   { path: '**', component: PagenotfoundComponent},
-
 ];
 
 
@@ -64,6 +67,9 @@ const appRoutes: Routes = [
     SignupComponent,
     LoginComponent,
     PagenotfoundComponent,
+    AboutUsComponent,
+    CategoriesComponent,
+    FilterPipe,
   ],
   imports: [
     HttpClientModule,

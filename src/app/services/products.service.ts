@@ -14,7 +14,7 @@ export class ProductsService {
 
    postProduct(commande: object) {
      console.log('service in');
-    return this.http.post('http://localhost:8081/mariem/api/products', commande);
+    return this.http.post('http://localhost:8080/api/products', commande);
    }
 
    getProductById(id) {
