@@ -1,10 +1,29 @@
+<div class="container" style="padding-top: 20px">
+  <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-9 col-md-offset-3">
+          <form action="" class="search-form">
+              <div class="form-group has-feedback">
+              <input type="text" class="form-control" name="search"[(ngModel)]="searchText" id="search" placeholder="search">
+                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+            </div>
+          </form>
+      </div>
+  </div>
+</div>
+
+
 <div class="products">
   <div class="container">
     <div class="row">
       <div class="col">
         <div class="product_grid flex-container wrap" style="height: 884.6px; position: relative; display:flex; padding-bottom: 1500px">
+     
           <!-- Product -->
-          <div *ngFor="let product of products" class="product" >
+          <div *ngFor="let product of products | filter : searchText" class="product" style="padding-bottom: 105px" >
             <div class="product_image"><img alt="" src="assets/images/{{product.id}}.jpg"></div>
             <div class="product_extra product_new"><a routerLink="product-sheet">New</a></div>
             <div class="product_content">
@@ -12,7 +31,6 @@
               <div class="product_price">${{product.prix}}</div>
             </div>
           </div>
-          <!-- Product -->
         </div>
       </div>
     </div>
