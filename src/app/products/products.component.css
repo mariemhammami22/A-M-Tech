@@ -29,15 +29,3 @@
 #custom-search-input .glyphicon-search{
   font-size: 23px;
 }
-
-
-.product_grid{
-  height: unset!important;
-  padding-right: 60px;
-}
-
-.product{
-  height: auto!important;
-  width:auto!important;
-  position: unset!important;
-}

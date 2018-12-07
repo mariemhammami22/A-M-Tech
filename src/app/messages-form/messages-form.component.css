@@ -1,0 +1,7 @@
+.contact_info_section:not(:first-child) {
+    margin-top: 50px !important ;
+  }
+  
+  .contact_info_section ul {
+    margin-top: 25px !important;
+  }
