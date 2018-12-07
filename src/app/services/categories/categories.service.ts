@@ -7,7 +7,7 @@ import { Http } from '@angular/http';
 })
 export class CategoriesService {
 
-  private baseUrl = 'http://localhost:8080/api/';
+  private baseUrl = 'http://54.38.33.183:8081/hardware/api/';
   constructor(private http: Http) { }
 
   getCategories(): Observable<any> {

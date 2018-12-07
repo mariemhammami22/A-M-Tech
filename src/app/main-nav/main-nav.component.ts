@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { CartInfo } from '../models/shared.model';
 
 @Component({
   selector: 'app-main-nav',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainNavComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cartInfo: CartInfo, private ref: ChangeDetectorRef) {
+
+  }
 
   ngOnInit() {
+  }
+
+  getCartCount() {
+    return this.cartInfo.getCartInfo();
+  }
+
+  detectChanges() {
+    this.ref.detectChanges();
   }
 
 }

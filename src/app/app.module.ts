@@ -28,6 +28,7 @@ import { CategoriesComponent } from './categories/categories.component';
 import { FilterPipe } from './filter.pipe';
 import { CategoriesService } from './services/categories/categories.service';
 import { HttpModule } from '@angular/http';
+import { CartInfo } from '../app/models/shared.model';
 
 const appRoutes: Routes = [
 
@@ -70,7 +71,7 @@ const appRoutes: Routes = [
     PagenotfoundComponent,
     AboutUsComponent,
     CategoriesComponent,
-    FilterPipe,
+    FilterPipe
   ],
   imports: [
     HttpClientModule,
@@ -82,7 +83,7 @@ const appRoutes: Routes = [
       { enableTracing: false } // <-- debugging purposes only
     )
   ],
-  providers: [CategoriesService],
+  providers: [CategoriesService, CartInfo],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
