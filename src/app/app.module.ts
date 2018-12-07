@@ -35,9 +35,8 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'products', component: ProductsComponent},
   { path: 'product/:productId' , component: ProductDetailComponent},
-
-  { path: '**', component: PagenotfoundComponent},
   { path: '', component: HomeComponent},
+  { path: '**', component: PagenotfoundComponent},
 
 ];
 
