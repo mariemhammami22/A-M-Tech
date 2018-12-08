@@ -9,15 +9,15 @@ export class ProductsService {
   constructor(private http: HttpClient) { }
 
   getProduct() {
-    return this.http.get('http://54.38.33.183:8081/hardware/api/products');
+    return this.http.get('http://localhost:8080/api/products');
    }
 
    postProduct(commande: object) {
-    return this.http.post('http://54.38.33.183:8081/hardware/api/products', commande);
+    return this.http.post('http://localhost:8080/api/products', commande);
    }
 
    getProductById(id) {
-    return this.http.get('http://54.38.33.183:8081/hardware/api/product/' + id );
+    return this.http.get('http://localhost:8080/api/product/' + id );
    }
 
 }
